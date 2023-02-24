@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Edible Schoolyard NYC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navbarBG: 'white',
+                    navbarText: 'black',
+                    green: '#08A842',
+                    divBg: '#F8F4F1'
+                },
+            }
+        }
+    }
+</script>
+
+<style>
+    .accordion {
+        background-color: #f8f7f7;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <div class="fixed w-screen">
+        <nav class="flex items-center justify-between flex-wrap bg-navbarBG p-3 lg:flex hidden">
+            <div class="flex items-center flex-shrink-0 text-white mr-6 ml-4">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                    alt="#ImgNotFound">
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow"></div>
+                <div>
+                    <a href="#Home" class="lg:inline-block mr-5 text-xl text-navbarText">Home</a>
+                    <a href="#About" class="lg:inline-block mr-5 text-xl text-navbarText">About</a>
+                    <a href="#Contact" class="lg:inline-block mr-5 text-xl text-navbarText">Contact</a>
+                    <a href="#Admission" class="lg:inline-block mr-5 text-xl text-navbarText">Admission</a>
+                    <a href="#Events" class="lg:inline-block mr-5 text-xl text-navbarText">Events</a>
+                    <a href="#News" class="lg:inline-block mr-5 text-xl text-navbarText">News</a>
+                    <a href="#Gallery" class="lg:inline-block mr-10 text-xl text-navbarText">Gallery</a>
+                </div>
+            </div>
+        </nav>
+        <nav
+            class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 lg:hidden flex">
+            <div class="container flex flex-wrap items-center justify-between mx-auto">
+                <a href="/" class="flex items-center">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-horizontal.svg"
+                        class="h-16" alt="Logo">
+                </a>
+                <div class="flex md:order-2">
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 "
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </nav>
+        <hr>
+    </div>
+    <div class="pt-14"></div>
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>ABOUT</b></h1>
+    <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">We make the connections between food, health, and
+        environment come alive for our students.</h1>
+    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201508_NancyBorowick_garden_7_erin_teacher_students_kids_togeth_working_thinking_gardening_tomatoes_lesson.jpg"
+        alt="#ImgNotFound" class="w-full max-h-[80vh]">
+    <div class="m-auto max-w-screen-md px-3">
+        <div class="my-14">
+            <h5 class="text-2xl">
+                Mission
+            </h5>
+            <p>
+                Edible Schoolyard NYC’s mission is to support edible education for every child in New York City. We
+                partner with New York City public schools to cultivate healthy students and communities through hands-on
+                cooking and gardening education, transforming children’s relationship with food.
+            </p>
+        </div>
+        <div class="my-14">
+            <h5 class="text-2xl">
+                Vision
+            </h5>
+            <p>
+                We believe in a future where all children are empowered to make healthy food choices for themselves,
+                their communities, and their environments.
+                <br>
+            <div class="text-center py-5 text-green">
+                <span class="text-3xl">“𝓘 𝓴𝓷𝓸𝔀 𝔀𝓱𝓮𝓻𝓮 𝓸𝓾𝓻 𝓯𝓸𝓸𝓭 𝓬𝓸𝓶𝓮𝓼 𝓯𝓻𝓸𝓶. 𝓘𝓽 𝓬𝓸𝓶𝓮𝓼
+                    𝓯𝓻𝓸𝓶 𝓹𝓵𝓪𝓷𝓽𝓼.”</span>
+            </div>
+            </p>
+        </div>
+        <div class="my-14">
+            <h5 class="text-2xl">
+                Our History
+            </h5>
+            <p>
+                Established in 2010, Edible Schoolyard NYC is a nonprofit organization committed to bringing Alice
+                Waters’ vision to New York City public schools. When Alice Waters, acclaimed restaurateur and food
+                activist, created the Edible Schoolyard Project in Berkeley, California in 1995, she knew the best way
+                to teach children the connections between food, health, and the environment was by integrating an edible
+                education program into our schools’ everyday curriculum.
+            </p>
+            <br>
+            <p>
+                As the first official “Founding Edible Schoolyard” in the Northeast, Edible Schoolyard NYC has adapted
+                the Edible Schoolyard Project curriculum and vision to fit the unique needs of New York City public
+                school children. We are inspired by the Berkeley program and are an autonomous nonprofit dedicated to
+                New York City.
+            </p>
+        </div>
+    </div>
+    <div class="p-10 bg-divBg">
+        <h1 class="text-center text-2xl my-10"><b>RELATED CONTENT</b></h1>
+        <div class="grid md:grid-rows-2 md:grid-flow-col gap-4 m-auto max-w-screen-xl">
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_lesson_students_working.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Our Approach
+                        </h5>
+                        <p class="mb-4 text-base">
+                            We work to address health inequities by providing schools in low-income communities with
+                            integrated food education.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/201410_CAVAN_garden_216_hires_esther_smiles_cecilia_individual_portrait_teacher_hoophouse-e1454362669429.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Team
+                        </h5>
+                        <p class="mb-4 text-base">
+                            We're creative, results-oriented individuals who are passionate about food education.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_students_watering_lesson.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Programs
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Through seed-to-table food education in public schools, we’re growing the next generation of
+                            healthy children.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201508_NancyBorowick_garden_216_hires_flowers_bee_beauty_1440.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Board
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Our Board is comprised of dedicated individuals who are deeply committed to Edible
+                            Schoolyard NYC’s mission.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2019/02/WEB-IMG_8541-copy-e1549043499859.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Impact
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Supporting edible education for every child in New York City
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/FY2A9178_1440-e1454342126679.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Friends
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Our supporters include nonprofits, foundations, corporate partners, and both the culinary
+                            and wellness communities.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>OUR APPROACH</b></h1>
+    <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">We work to address health inequities by providing
+        schools in low-income communities with integrated food education.</h1>
+    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_lesson_students_working.jpg"
+        alt="#ImgNotFound" class="w-full max-h-[80vh]">
+    <div class="m-auto max-w-screen-md px-3">
+        <div class="my-14">
+            <h5 class="text-2xl">
+                Equal access to healthy food is essential.
+            </h5>
+            <p class="pt-3">
+                TOO MANY OF NYC’S 1.1 MILLION PUBLIC SCHOOL STUDENTS AREN’T GETTING THE FOOD THEY NEED TO THRIVE.
+            </p>
+            <li class="text-sm pt-1">
+                Nearly one in four children in New York City is food insecure
+            </li>
+            <li class="text-sm pt-1">
+                Only 14% of American children meet their daily fruit intake; 20% meet the daily requirement for
+                vegetables
+            </li>
+            <li class="text-sm pt-1">
+                Over 40% of New York City public school children are obese or overweight
+            </li>
+            <li class="text-sm pt-1">
+                Childhood obesity disproportionately affects low-income communities and communities of color
+            </li>
+            <li class="text-sm pt-1">
+                Obesity rates in East Harlem are three times what they are on the Upper East Side, just a few short
+                blocks away.
+            </li>
+        </div>
+        <div class="my-14">
+            <h5 class="text-2xl">
+                An edible education is about more than just food.
+            </h5>
+            <p class="pt-3">
+                EDIBLE SCHOOLYARD NYC IS GROWING HEALTHIER KIDS THROUGH A GRASSROOTS APPROACH TO FOOD EDUCATION THAT
+                COMBINES ACADEMIC RIGOR WITH HANDS-ON, CREATIVE ENGAGEMENT.
+            </p>
+            <li class="text-sm pt-1">
+                We work mainly in schools located in low-income communities, areas identified by the NYC Department of
+                Health as having the highest rates of diet-related diseases
+            </li>
+            <li class="text-sm pt-1">
+                Our curriculum is aligned with Common Core standards, strengthening overall academic achievement
+            </li>
+            <li class="text-sm pt-1">
+                All of our classes and workshops are free of charge, fully accessible to the communities we serve
+            </li>
+            <li class="text-sm pt-1">
+                We work closely with school teachers and staff, enabling them to build their capacity for edible
+                education based on their particular needs, goals, and resources
+            </li>
+            <li class="text-sm pt-1">
+                We have seen that an inspiring, hands-on food education has a profound impact on the students we serve,
+                building character and instilling a sense of personal responsibility
+            </li>
+            <li class="text-sm pt-1">
+                Working with food is fun! Our approach brings a joyful, creative, and interactive experience into the
+                classroom.
+            </li>
+            <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/kitchen_students_cutting_cooking.jpg"
+                alt="#ImgNotFound" class="m-auto max-w-screen-sm mt-5 w-full">
+        </div>
+    </div>
+    <div class="p-10 bg-divBg">
+        <h1 class="text-center text-2xl my-10"><b>RELATED CONTENT</b></h1>
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 m-auto max-w-screen-xl">
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2019/02/WEB-IMG_8541-copy-e1549043499859.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Impact
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Supporting edible education for every child in New York City
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_students_watering_lesson.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Programs
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Through seed-to-table food education in public schools, we’re growing the next generation of
+                            healthy children.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201410_CAVAN_kitchen_7_cooking_stirring-salsa-kids-students-e1454091891138.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Donate
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Your support means that more New York City public school kids can thrive. Thank you for your
+                            generosity!
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>OUR APPROACH</b></h1>
+    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2019/02/WEB-IMG_8541-copy-e1549043499859.jpg"
+        alt="#ImgNotFound" class="w-full max-h-[85vh]">
+    <div class="m-auto max-w-screen-md px-3">
+        <div class="my-14">
+            <h5 class="text-2xl">
+                An edible education is about more than just food
+            </h5>
+            <p class="pt-3">
+                Our work nurtures healthy school communities where students can thrive socially, emotionally,
+                academically, and physically. Our programs sit at the intersection of food, wellness, education, and
+                sustainability, and supports students, families, and school communities. We believe this work is
+                fundamental to a better future, preparing young people to lead the way for community wellbeing and
+                equity, and ultimately a more just and sustainable future for all.
+            </p>
+        </div>
+    </div>
+    <div class="m-auto max-w-screen-xl px-3">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full lg:w-1/2 my-auto">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/07/Weighing-Greens.-photo-cred-Jen-Harris-1.jpg"
+                    alt="#ImgNotFound">
+            </div>
+            <div class="w-full lg:w-1/2 py-3 px-24 text-white" style="background-color: #EE6F32;">
+                <h5 class="text-2xl">
+                    Our Programs
+                </h5>
+                <p class="pt-3">
+                    Our programs include:
+                </p>
+                <li class="text-sm pt-1">Hands-on cooking and gardening classes that all students participate in as part
+                    of their school day</li>
+                <li class="text-sm pt-1">Extracurriculars and clubs, cafeteria tastings, and family and community events
+                </li>
+                <li class="text-sm pt-1">Food distributions like farmstands and recipe kits</li>
+                <li class="text-sm pt-1">Professional development workshops</li>
+                <p class="pt-3">
+                    Our programming and curriculum is culturally responsive to students’ backgrounds, reinforces core
+                    curriculum like math, science, and reading, supports social-emotional learning, and builds student
+                    commitment to environmental justice. At the heart of our school programs are our gardens, which
+                    serve as a food production space, as well as a joyful and welcoming green space and outdoor
+                    classroom for the entire community.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>OUR REACH</b></h1>
+    <div class="m-auto max-w-screen-xl px-3">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/3 my-auto text-center px-10">
+                <h1 class="text-7xl font-semibold text-green mb-5">3,500</h1>
+                <h1 class="font-semibold">Students</h1>
+                <h1 class="font-semibold">Taught at our direct service schools in 2021-2022</h1>
+            </div>
+            <div class="w-full md:w-1/3 my-auto text-center px-10">
+                <h1 class="text-7xl font-semibold text-green mb-5">3,500</h1>
+                <h1 class="font-semibold">Schools</h1>
+                <h1 class="font-semibold">Direct public school sites in Brooklyn, Manhattan, and the Bronx</h1>
+            </div>
+            <div class="w-full md:w-1/3 my-auto text-center px-10">
+                <h1 class="text-7xl font-semibold text-green mb-5">3,500</h1>
+                <h1 class="font-semibold">Attendees</h1>
+                <h1 class="font-semibold">at our community programs</h1>
+            </div>
+        </div>
+    </div>
+    <div class="m-auto max-w-screen-xl px-3 mt-24">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full lg:w-1/2 py-3 px-24 text-white" style="background-color: #B6499A;">
+                <h5 class="text-2xl">
+                    Impacts Inside and Outside of ESYNYC
+                </h5>
+                <p class="pt-3">
+                    Based on surveys this year, parents and school teachers have shared that our students are growing
+                    socially-emotionally, choosing healthier foods, and engaging more in their other classes and at
+                    home.
+                </p>
+                <p class="pt-3">
+                    Teachers say:
+                </p>
+                <li class="text-sm pt-1">
+                    Two out of three teachers report students are making academic connections between ESYNYC lessons and
+                    core classes, like math and science
+                </li>
+                <li class="text-sm pt-1">
+                    79% of teachers say students feel safe, welcome, and excited to participate in ESYNYC programming
+                </li>
+                <li class="text-sm pt-1">
+                    Over half of teachers report students are positively engaged, not only in ESYNYC lessons but in
+                    other classes as well
+                </li>
+                <p class="pt-3">
+                    Parents report:
+                </p>
+                <p class="pt-3">
+                    ESYNYC programming is shifting students’ relationship with food. They report their students are more
+                    mindful about their food choices, more adventurous about trying new foods, and applying the lessons
+                    they learn at home.
+                </p>
+            </div>
+            <div class="w-full lg:w-1/2 my-auto">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/07/TZ3A1659.jpg"
+                    alt="#ImgNotFound">
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center text-xl mt-20 mb-5 pt-8"><b>2021-2022 ACTIVITIES</b></h1>
+    <div class="m-auto max-w-screen-xl px-3">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/3 my-auto text-center px-10">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/07/Pot_orange.png"
+                    alt="#ImgNotFound" class="h-16 m-auto">
+                <h1 class="font-semibold">2,178</h1>
+                <h1 class="font-semibold">kitchen and garden lessons taught</h1>
+            </div>
+            <div class="w-full md:w-1/3 my-auto text-center px-10">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/07/Carrot-1.png"
+                    alt="#ImgNotFound" class="h-16 m-auto">
+                <h1 class="font-semibold">12,997</h1>
+                <h1 class="font-semibold">food distributions to students and families</h1>
+            </div>
+            <div class="w-full md:w-1/3 my-auto text-center px-10">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/07/Basil.png" alt="#ImgNotFound"
+                    class="h-16 m-auto">
+                <h1 class="font-semibold">2,878</h1>
+                <h1 class="font-semibold">pounds of produce harvested in our school gardens</h1>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center text-xl mt-20 pt-8"><b>OUR RESULTS</b></h1>
+    <h1 class="text-center text-2xl pt-4">Our programs impact students, families, schools, and educators.</h1>
+    <div class="m-auto max-w-screen-lg my-10 px-3">
+        <button class="accordion text-2xl">Thriving Students</button>
+        <div class="panel p-5">
+            <li>Students engage in and enjoy our programming, leading to more school engagement overall</li>
+            <li>Measured through school staff and professional development participant surveys, and ESYNYC staff
+                observations</li>
+            <li>“Time is already up!? It goes by so fast when we are having fun” -5th grader at P.S./M.S. 7</li>
+        </div>
+        <button class="accordion text-2xl">Engaged Families</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion text-2xl">Healthy School Communities</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion text-2xl">Empowered Educators</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>TEAM</b></h1>
+    <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">
+        We're creative, results-oriented individuals who are passionate about food education.
+    </h1>
+    <div class="m-auto max-w-screen-xl px-3">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+        </div>
+    </div>
+    <div class="p-10 bg-divBg">
+        <h1 class="text-center text-2xl my-10"><b>RELATED CONTENT</b></h1>
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 m-auto max-w-screen-xl">
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2019/02/WEB-IMG_8541-copy-e1549043499859.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Impact
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Supporting edible education for every child in New York City
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_students_watering_lesson.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Programs
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Through seed-to-table food education in public schools, we’re growing the next generation of
+                            healthy children.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201410_CAVAN_kitchen_7_cooking_stirring-salsa-kids-students-e1454091891138.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Donate
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Your support means that more New York City public school kids can thrive. Thank you for your
+                            generosity!
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>BOARD</b></h1>
+    <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">
+        Our Board is comprised of dedicated individuals who are deeply committed to Edible Schoolyard NYC’s mission.
+    </h1>
+    <div class="m-auto max-w-screen-xl px-3">
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/team-photo-lizaengelberg.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2023/01/Screen-Shot-2023-01-10-at-9.33.02-AM.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/12/JBalsam_hs.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+            <div class="w-full md:w-1/4 my-auto text-center">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/01/IMG_5447.jpg"
+                    alt="#ImgNotFound" class="rounded-full max-h-48	m-auto mb-3 mt-10">
+                <b>JASMIN ALIM</b>
+                <br>
+                <h6>Program Manager</h6>
+            </div>
+        </div>
+    </div>
+    <div class="p-10 bg-divBg">
+        <h1 class="text-center text-2xl my-10"><b>RELATED CONTENT</b></h1>
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 m-auto max-w-screen-xl">
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2019/02/WEB-IMG_8541-copy-e1549043499859.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Impact
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Supporting edible education for every child in New York City
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_students_watering_lesson.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Programs
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Through seed-to-table food education in public schools, we’re growing the next generation of
+                            healthy children.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201410_CAVAN_kitchen_7_cooking_stirring-salsa-kids-students-e1454091891138.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Donate
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Your support means that more New York City public school kids can thrive. Thank you for your
+                            generosity!
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>ASSOCIATE BOARD</b></h1>
+    <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">The Associate Board is the newest branch of the
+        Edible Schoolyard NYC community. Bringing a wide variety of expertise and passion, members are helping advance
+        our mission.</h1>
+    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/20150731_NancyBorowick_garden_216_gardening_prodev_gloves_planting_growing.jpg"
+        alt="#ImgNotFound" class="w-full max-h-[80vh]">
+    <div class="text-center">
+        <h1 class="mt-10"><b>Associate Board</b></h1>
+        <p>as of 7/27/22</p>
+        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/11/chicken-100x116.png" alt="#ImgNotFound"
+            class="max-w-sm m-auto my-5">
+        <div class="poem mb-20">
+            <p class="mt-1">Jacob Andrews, Bennie Co-Chair</p>
+            <p class="mt-1">Michelle See, Chainguard Co-Chair</p>
+            <p class="mt-1">Olivia Anakwe, Model, Student</p>
+            <p class="mt-1">Samah Dada, cookbook author and TV host</p>
+            <p class="mt-1">Casey Cotter Hanley, Nutritionist/Health Coach</p>
+            <p class="mt-1">Michael Harris, Attentive Mobile</p>
+            <p class="mt-1">Lucie Holliday, the Carlyle Group</p>
+            <p class="mt-1">Liz Diemer, Michael J Fox Foundation</p>
+            <p class="mt-1">Josh Feit, Linklaters LLC</p>
+            <p class="mt-1">Sheetal Gandhi, Boston Consulting Group</p>
+            <p class="mt-1">Rose Gottwald Patten</p>
+            <p class="mt-1">Kyle Ishmael, Public policy consultant</p>
+            <p class="mt-1">Chris Jones, Promethean IT</p>
+            <p class="mt-1">Joanie Kim, Melvin Capital</p>
+            <p class="mt-1">Hannah Reeve Kowalski, Warby Parker</p>
+            <p class="mt-1">Addi McDaniel, D.E. Shaw</p>
+            <p class="mt-1">Britt McVicker, Special project consultant & founder of bybritt</p>
+            <p class="mt-1">Amy Mignosi, Barclays Investment Bank</p>
+            <p class="mt-1">Diana Ming, Goldman Sachs</p>
+            <p class="mt-1">Eddie Navarrete, Hustlehub</p>
+            <p class="mt-1">Romilly Newman, Food Stylist</p>
+            <p class="mt-1">Paula Perez, Oatly</p>
+            <p class="mt-1">Nell Potter, Student</p>
+            <p class="mt-1">Hillary Reinsberg, The Infatuation/Zagat</p>
+            <p class="mt-1">Eleanor Vernon, The Sit Down</p>
+        </div>
+    </div>
+    <div class="p-10 bg-divBg">
+        <h1 class="text-center text-2xl my-10"><b>RELATED CONTENT</b></h1>
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 m-auto max-w-screen-xl">
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2019/02/WEB-IMG_8541-copy-e1549043499859.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Impact
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Supporting edible education for every child in New York City
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/gardening_students_watering_lesson.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Programs
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Through seed-to-table food education in public schools, we’re growing the next generation of
+                            healthy children.
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="block max-w-sm shadow-lg dark:bg-neutral-700 bg-white">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201410_CAVAN_kitchen_7_cooking_stirring-salsa-kids-students-e1454091891138.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <h5 class="mb-2 text-xl font-medium">
+                            Donate
+                        </h5>
+                        <p class="mb-4 text-base">
+                            Your support means that more New York City public school kids can thrive. Thank you for your
+                            generosity!
+                        </p>
+                        <a href="#credit" class="underline">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>FRIENDS</b></h1>
+    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/FY2A9178_1440-e1454342126679.jpg"
+        alt="#ImgNotFound" class="w-full max-h-[80vh]">
+
+    <div class="m-auto max-w-screen-md px-3 my-20">
+        <h5 class="mb-2 text-xl font-medium">
+            Thank you to our partners!
+        </h5>
+        <p class="mb-4 text-base">
+            We are grateful for a lively and diverse community of partners, including individuals, foundations,
+            corporate, culinary, and community partners, who share our commitment to supporting edible education for NYC
+            students. We are thrilled to count them as our friends and highlight some of their contributions to edible
+            education in New York City here.
+            <br>
+            <br>
+            To learn about all the ways you can get involved as a corporate partner, please reach out to am@esynyc.org.
+        </p>
+        <button class="accordion text-2xl mt-14">Foundations</button>
+        <div class="panel p-5">
+            <li>Students engage in and enjoy our programming, leading to more school engagement overall</li>
+            <li>Measured through school staff and professional development participant surveys, and ESYNYC staff
+                observations</li>
+            <li>“Time is already up!? It goes by so fast when we are having fun” -5th grader at P.S./M.S. 7</li>
+        </div>
+        <button class="accordion text-2xl">Corporate</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion text-2xl">Corporate Work Day</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion text-2xl">Culinary Community</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+        <button class="accordion text-2xl">Community</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+
+
+    <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>PRESS</b></h1>
+    <h1 class="text-center text-2xl m-auto max-w-screen-md mb-10 px-3">Read what people are saying about Edible
+        Schoolyard NYC
+        programs and events.</h1>
+
+    <div class="px-3 py-10 bg-divBg">
+
+        <div class="grid grid-rows-1 md:grid-flow-col gap-4 m-auto max-w-screen-xl">
+            <div class="justify-center max-w-md m-auto">
+                <div class="block max-w-sm bg-white shadow-lg dark:bg-neutral-700">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2022/05/edible-schoolyard-nyc-1-pdf.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" class="m-auto">
+                        <h5 class="my-5 px-5 text-center text-xl font-medium">
+                            Edible Schoolyard NYC announces Board Chair transition
+                        </h5>
+                        <p> &emsp;</p>
+                        <p> &emsp;</p>
+                        <h5 class="my-5 px-5 text-center text-md font-medium">
+                            View Pdf
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-center max-w-md m-auto">
+                <div class="block max-w-sm bg-white shadow-lg dark:bg-neutral-700">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/09/IMG_3834.jpg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" class="m-auto">
+                        <h5 class="my-5 px-5 text-center text-xl font-medium">
+                            Edible Schoolyard NYC announces new Executive Director, Shanon Morris
+                        </h5>
+                        <p> &emsp;</p>
+                        <p> &emsp;</p>
+                        <h5 class="my-5 px-5 text-center text-md font-medium">
+                            View Pdf
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-center max-w-md m-auto">
+                <div class="block max-w-sm bg-white shadow-lg dark:bg-neutral-700">
+                    <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/press-featured-placeholder.svg"
+                        alt="#ImgNotFound" class="h-80 w-full" />
+                    <div class="p-6">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" class="m-auto">
+                        <h5 class="my-5 px-5 text-center text-xl font-medium">
+                            Edible Education Goes Online in the COVID Era
+                        </h5>
+                        <p>As the school year starts in the most of uncertain of times, these food and garden classes
+                            enter new virtual territory.</p>
+                        <h5 class="my-5 px-5 text-center text-md font-medium">
+                            View Pdf
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="grid grid-rows-9 lg:grid-flow-col gap-4 mt-14  justify-center items-center px-3">
+        <div class="flex">
+            <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4">
+                <img class="sm:h-15 h-14 mt-10 px-6"
+                    src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                    alt="#ImgNotFound" />
+                <div class="flex flex-col justify-start">
+                    <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                        Edible Schoolyard NYC announces Board Chair transition
+                    </h5>
+                    <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                        May 4, 2022
+                    </p>
+                    <h5 class="my-5 text-md font-medium">
+                        View Pdf
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="flex flex-col sm:max-w-xl sm:flex-row">
+                <img class="h-48 mt-10 m-24"
+                    src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/media-kit-illustration.png"
+                    alt="#ImgNotFound" />
+            </div>
+        </div>
+    </div> -->
+
+    <div class="grid justify-center items-center px-3 pb-5">
+        <div class="max-w-5xl">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2">
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:max-w-xl sm:flex-row border-b-2 pb-4 mt-14">
+                        <img class="sm:h-15 h-14 mt-10 px-6"
+                            src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
+                            alt="#ImgNotFound" />
+                        <div class="flex flex-col justify-start">
+                            <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
+                                Edible Schoolyard NYC announces Board Chair transition
+                            </h5>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-300">
+                                May 4, 2022
+                            </p>
+                            <h5 class="my-5 text-md font-medium">
+                                View Pdf
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="text-center tracking-widest">
+                        <button type="button"
+                            class="bg-black sm:hover:bg-green text-white sm:hover:text-black px-4 py-2 mt-5">SUBSCRIBE</button>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <img class="h-48 mt-10 m-24"
+                        src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/media-kit-illustration.png"
+                        alt="#ImgNotFound" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <hr>
+    <div class="text-center tracking-widest px-3 py-20">
+        <h1 class="text-xl"><b>JOIN OUR MAILING LIST</b></h1>
+        <p class="text-base py-4"><b>Sign up to receive updates about our programs, events, workshops, and
+                more.</b></p>
+        <div class="grid lg:grid-rows-1 grid-rows-2 sm:grid-flow-col gap-4 justify-center items-center px-3">
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-first-name">
+                    First Name
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-first-name" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-last-name">
+                    Last Name
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-last-name" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-email">
+                    Email
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-email" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-zip-code">
+                    Zip Code
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-zip-code" type="text">
+            </div>
+        </div>
+        <button type="button"
+            class="bg-black sm:hover:bg-green text-white sm:hover:text-black px-4 py-2 mt-5">SUBSCRIBE</button>
+    </div>
+    <div class="text-center tracking-widest px-3 py-5">
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 justify-center items-center px-3">
+            <a href="#contact" class="text-base"><b>CONTACT US</b></a>
+            <a href="#more" class="text-base"><b>COME SEE US</b></a>
+            <a href="#press" class="text-base"><b>PRESS</b></a>
+            <a href="#careers" class="text-base"><b>CAREERS</b></a>
+            <b>
+                <a href="#fb" class="text-base"><i class="fa fa-facebook-f px-2"></i></a>
+                <a href="#twitter" class="text-base"><i class="fa fa-twitter px-2"></i></a>
+                <a href="#insta" class="text-base"><i class="fa fa-instagram px-2"></i></a>
+            </b>
+        </div>
+        <p class="text-sm text-gray-500">
+            © Copyright 2019 Edible Schoolyard NYC. All rights reserved.
+            <a href="#terms" class="underline">Terms of Use</a> and
+            <a href="#policy" class="underline">Privacy Policy</a>.
+            <a href="#credit" class="underline">Site Credits.</a>
+        </p>
+    </div>
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

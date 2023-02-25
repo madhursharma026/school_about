@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Edible Schoolyard NYC</title>
+    <title>About - Tailwindcss School NYC</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </head>
 <script>
     tailwind.config = {
@@ -60,12 +61,18 @@
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div class="text-sm lg:flex-grow"></div>
                 <div>
-                    <a href="#Home" class="lg:inline-block mr-5 text-xl text-navbarText">Home</a>
-                    <a href="#About" class="lg:inline-block mr-5 text-xl text-navbarText">About</a>
-                    <a href="#Contact" class="lg:inline-block mr-5 text-xl text-navbarText">Contact</a>
-                    <a href="#Admission" class="lg:inline-block mr-5 text-xl text-navbarText">Admission</a>
-                    <a href="#Events" class="lg:inline-block mr-5 text-xl text-navbarText">Events</a>
-                    <a href="#News" class="lg:inline-block mr-5 text-xl text-navbarText">News</a>
+                    <a href="https://school-tailwindcss.vercel.app/school.html"
+                        class="lg:inline-block mr-5 text-xl text-navbarText">Home</a>
+                    <a href="https://school-about.vercel.app/About.html"
+                        class="lg:inline-block mr-5 text-xl text-navbarText">About</a>
+                    <a href="https://school-contact.vercel.app/contact.html"
+                        class="lg:inline-block mr-5 text-xl text-navbarText">Contact</a>
+                    <a href="https://school-admission.vercel.app/Admission.html"
+                        class="lg:inline-block mr-5 text-xl text-navbarText">Admission</a>
+                    <a href="https://school-event.vercel.app/event.html"
+                        class="lg:inline-block mr-5 text-xl text-navbarText">Events</a>
+                    <a href="https://school-press.vercel.app/press.html"
+                        class="lg:inline-block mr-5 text-xl text-navbarText">News</a>
                     <a href="#Gallery" class="lg:inline-block mr-10 text-xl text-navbarText">Gallery</a>
                 </div>
             </div>
@@ -73,11 +80,11 @@
         <nav
             class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 lg:hidden flex">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
-                <a href="/" class="flex items-center">
+                <a href="https://school-tailwindcss.vercel.app/school.html" class="flex items-center">
                     <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-horizontal.svg"
                         class="h-16" alt="Logo">
                 </a>
-                <div class="flex md:order-2">
+                <div class="flex lg:order-2">
                     <button data-collapse-toggle="navbar-sticky" type="button"
                         class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 "
                         aria-controls="navbar-sticky" aria-expanded="false">
@@ -89,28 +96,40 @@
                         </svg>
                     </button>
                 </div>
-                <!-- <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
                     <ul
-                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            <a href="https://school-tailwindcss.vercel.app/school.html"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 md:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                                 aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                            <a href="https://school-about.vercel.app/About.html"
+                                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white">About</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                            <a href="https://school-contact.vercel.app/contact.html"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 md:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                            <a href="https://school-admission.vercel.app/Admission.html"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 md:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Admission</a>
+                        </li>
+                        <li>
+                            <a href="https://school-event.vercel.app/event.html"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 md:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Events</a>
+                        </li>
+                        <li>
+                            <a href="https://school-press.vercel.app/press.html"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 md:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">News</a>
+                        </li>
+                        <li>
+                            <a href="#Gallery"
+                                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 md:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Gallery</a>
                         </li>
                     </ul>
-                </div> -->
+                </div>
             </div>
         </nav>
         <hr>
@@ -120,14 +139,14 @@
     <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">We make the connections between food, health, and
         environment come alive for our students.</h1>
     <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201508_NancyBorowick_garden_7_erin_teacher_students_kids_togeth_working_thinking_gardening_tomatoes_lesson.jpg"
-        alt="#ImgNotFound" class="w-full max-h-[80vh]">
+        alt="#ImgNotFound" class="max-h-[80vh]" style="width: 100%;">
     <div class="m-auto max-w-screen-md px-3">
         <div class="my-14">
             <h5 class="text-2xl">
                 Mission
             </h5>
             <p>
-                Edible Schoolyard NYC’s mission is to support edible education for every child in New York City. We
+                Tailwindcss School NYC’s mission is to support edible education for every child in New York City. We
                 partner with New York City public schools to cultivate healthy students and communities through hands-on
                 cooking and gardening education, transforming children’s relationship with food.
             </p>
@@ -151,16 +170,16 @@
                 Our History
             </h5>
             <p>
-                Established in 2010, Edible Schoolyard NYC is a nonprofit organization committed to bringing Alice
+                Established in 2010, Tailwindcss School NYC is a nonprofit organization committed to bringing Alice
                 Waters’ vision to New York City public schools. When Alice Waters, acclaimed restaurateur and food
-                activist, created the Edible Schoolyard Project in Berkeley, California in 1995, she knew the best way
+                activist, created the Tailwindcss School Project in Berkeley, California in 1995, she knew the best way
                 to teach children the connections between food, health, and the environment was by integrating an edible
                 education program into our schools’ everyday curriculum.
             </p>
             <br>
             <p>
-                As the first official “Founding Edible Schoolyard” in the Northeast, Edible Schoolyard NYC has adapted
-                the Edible Schoolyard Project curriculum and vision to fit the unique needs of New York City public
+                As the first official “Founding Tailwindcss School” in the Northeast, Tailwindcss School NYC has adapted
+                the Tailwindcss School Project curriculum and vision to fit the unique needs of New York City public
                 school children. We are inspired by the Berkeley program and are an autonomous nonprofit dedicated to
                 New York City.
             </p>
@@ -304,7 +323,7 @@
                 An edible education is about more than just food.
             </h5>
             <p class="pt-3">
-                EDIBLE SCHOOLYARD NYC IS GROWING HEALTHIER KIDS THROUGH A GRASSROOTS APPROACH TO FOOD EDUCATION THAT
+                Tailwindcss School NYC IS GROWING HEALTHIER KIDS THROUGH A GRASSROOTS APPROACH TO FOOD EDUCATION THAT
                 COMBINES ACADEMIC RIGOR WITH HANDS-ON, CREATIVE ENGAGEMENT.
             </p>
             <li class="text-sm pt-1">
@@ -411,7 +430,7 @@
                 <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2021/07/Weighing-Greens.-photo-cred-Jen-Harris-1.jpg"
                     alt="#ImgNotFound">
             </div>
-            <div class="w-full lg:w-1/2 py-3 px-24 text-white" style="background-color: #EE6F32;">
+            <div class="w-full lg:w-1/2 py-3 md:px-24 px-3 text-white" style="background-color: #EE6F32;">
                 <h5 class="text-2xl">
                     Our Programs
                 </h5>
@@ -459,7 +478,7 @@
     </div>
     <div class="m-auto max-w-screen-xl px-3 mt-24">
         <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full lg:w-1/2 py-3 px-24 text-white" style="background-color: #B6499A;">
+            <div class="w-full lg:w-1/2 py-3 md:px-24 px-3 text-white" style="background-color: #B6499A;">
                 <h5 class="text-2xl">
                     Impacts Inside and Outside of ESYNYC
                 </h5>
@@ -729,7 +748,7 @@
 
     <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>BOARD</b></h1>
     <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">
-        Our Board is comprised of dedicated individuals who are deeply committed to Edible Schoolyard NYC’s mission.
+        Our Board is comprised of dedicated individuals who are deeply committed to Tailwindcss School NYC’s mission.
     </h1>
     <div class="m-auto max-w-screen-xl px-3">
         <div class="flex flex-wrap -mx-3 mb-6">
@@ -904,7 +923,7 @@
 
     <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>ASSOCIATE BOARD</b></h1>
     <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">The Associate Board is the newest branch of the
-        Edible Schoolyard NYC community. Bringing a wide variety of expertise and passion, members are helping advance
+        Tailwindcss School NYC community. Bringing a wide variety of expertise and passion, members are helping advance
         our mission.</h1>
     <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2016/01/20150731_NancyBorowick_garden_216_gardening_prodev_gloves_planting_growing.jpg"
         alt="#ImgNotFound" class="w-full max-h-[80vh]">
@@ -1064,7 +1083,7 @@
                         <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
                             alt="#ImgNotFound" class="m-auto">
                         <h5 class="my-5 px-5 text-center text-xl font-medium">
-                            Edible Schoolyard NYC announces Board Chair transition
+                            Tailwindcss School NYC announces Board Chair transition
                         </h5>
                         <p> &emsp;</p>
                         <p> &emsp;</p>
@@ -1082,7 +1101,7 @@
                         <img src="https://www.edibleschoolyardnyc.org/wp-content/themes/edibleschoolyard/assets/img/logo-stacked.svg"
                             alt="#ImgNotFound" class="m-auto">
                         <h5 class="my-5 px-5 text-center text-xl font-medium">
-                            Edible Schoolyard NYC announces new Executive Director, Shanon Morris
+                            Tailwindcss School NYC announces new Executive Director, Shanon Morris
                         </h5>
                         <p> &emsp;</p>
                         <p> &emsp;</p>
@@ -1121,7 +1140,7 @@
                     alt="#ImgNotFound" />
                 <div class="flex flex-col justify-start">
                     <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                        Edible Schoolyard NYC announces Board Chair transition
+                        Tailwindcss School NYC announces Board Chair transition
                     </h5>
                     <p class="text-xs text-neutral-500 dark:text-neutral-300">
                         May 4, 2022
@@ -1151,7 +1170,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1167,7 +1186,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1183,7 +1202,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1199,7 +1218,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1215,7 +1234,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1231,7 +1250,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1247,7 +1266,7 @@
                             alt="#ImgNotFound" />
                         <div class="flex flex-col justify-start">
                             <h5 class="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
-                                Edible Schoolyard NYC announces Board Chair transition
+                                Tailwindcss School NYC announces Board Chair transition
                             </h5>
                             <p class="text-xs text-neutral-500 dark:text-neutral-300">
                                 May 4, 2022
@@ -1262,7 +1281,7 @@
                             class="bg-black sm:hover:bg-green text-white sm:hover:text-black px-4 py-2 mt-5">SUBSCRIBE</button>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 px-3">
+                <div class="w-full md:w-1/2 px-3 md:grid hidden">
                     <img class="h-48 mt-10 m-24"
                         src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/media-kit-illustration.png"
                         alt="#ImgNotFound" />
@@ -1331,8 +1350,8 @@
                 <a href="#insta" class="text-base"><i class="fa fa-instagram px-2"></i></a>
             </b>
         </div>
-        <p class="text-sm text-gray-500">
-            © Copyright 2019 Edible Schoolyard NYC. All rights reserved.
+        <p class="text-sm text-gray-500 mt-5">
+            © Copyright 2019 Tailwindcss School NYC. All rights reserved.
             <a href="#terms" class="underline">Terms of Use</a> and
             <a href="#policy" class="underline">Privacy Policy</a>.
             <a href="#credit" class="underline">Site Credits.</a>

@@ -72,6 +72,38 @@
         background-color: white;
         overflow: hidden;
     }
+
+    .bgImage {
+        background-image: url('https://www.investinegypt.gov.eg/Style%20Library/Images/StaticPages/about%20us-min.png');
+        height: 40vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media (min-width: 767px) {
+        .content {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .bgImage {
+            height: 50vh;
+        }
+
+        .content {
+            position: absolute;
+            top: 32%;
+            left: 50%;
+            width: 95%;
+            transform: translate(-50%, -50%);
+        }
+    }
 </style>
 
 <body>
@@ -102,8 +134,7 @@
                     </div>
                 </div>
             </nav>
-            <nav class="bg-white px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 lg:hidden flex"
-                style="margin-top: -76px;">
+            <nav class="bg-white px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 lg:hidden flex">
                 <div class="container flex flex-wrap items-center justify-between mx-auto">
                     <a href="https://school-home.vercel.app/school.html" class="flex items-center">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuMdkg5uExhqnoTkIS1Tznf93WP0P2crfIJkN32wcmDDNWr6Is9eePJqtjBPinWwfH_c&usqp=CAU"
@@ -164,11 +195,17 @@
     <div class="lg:pt-16"></div>
 
     <!-- <h1 class="text-center text-4xl mt-20 mb-5 pt-8"><b>ABOUT</b></h1> -->
-    <h1 class="text-center text-5xl mt-20 mb-5 lg:pt-0 pt-12"><b>ABOUT</b></h1>
+    <!-- <h1 class="text-center text-5xl mt-20 mb-5 lg:pt-0 pt-12"><b>ABOUT</b></h1>
     <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">We make the connections between food, health, and
         environment come alive for our students.</h1>
     <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/201508_NancyBorowick_garden_7_erin_teacher_students_kids_togeth_working_thinking_gardening_tomatoes_lesson.jpg"
-        alt="#ImgNotFound" class="max-h-[80vh]" style="width: 100%;">
+        alt="#ImgNotFound" class="max-h-[80vh]" style="width: 100%;"> -->
+    <div class="bgImage"></div>
+    <div class="content text-white">
+        <h1 class="text-center text-5xl mb-5 lg:mt-5"><b>ABOUT</b></h1>
+        <h1 class="text-center text-2xl m-auto max-w-screen-sm mb-10 px-3">We make the connections between food, health,
+            and environment come alive for our students.</h1>
+    </div>
     <div class="m-auto max-w-screen-md px-3">
         <div class="my-14">
             <h5 class="text-2xl">
